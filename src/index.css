@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import "nes.css/css/nes.min.css";
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #202020;
+  color: #fff;
+  font-family: 'Press Start 2P', cursive;
+  overflow-x: hidden;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+.nes-container.is-dark {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Fix visibility for balloons - usually they have white background, so they need dark text */
+.nes-balloon,
+.nes-balloon p {
+  color: #000 !important;
+}
+
+.nes-balloon.is-dark,
+.nes-balloon.is-dark p {
+  color: #fff !important;
+}
+
+/* Custom button wrapper to fix default text alignment in some cases */
+.nes-btn {
+  font-family: 'Press Start 2P', cursive;
+}
+
+.loading-text {
+  text-align: center;
+  animation: blink 1s infinite steps(1);
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+}
+
+input.nes-input {
+  font-family: 'Press Start 2P', cursive;
+  margin-bottom: 20px;
+}
