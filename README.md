@@ -46,6 +46,10 @@
    - `VITE_QUESTION_COUNT`: 遊戲題數 (例如: 5)。
 3. GitHub Actions 會自動編譯並部署至 `gh-pages` 分支。
 
+> [!IMPORTANT]
+> **GitHub Secrets 是必須手動設定的**。
+> 本機的 `.env` 檔案不會被推送到 GitHub（已列入 `.gitignore`），因此部署到 GitHub Pages 後，您必須在 GitHub 的倉庫設定中手動新增這些 Secrets，否則遊戲會自動切換為「演示模式 (Mock Data)」。
+
 ---
 
 ## 📝 測試題庫：生成式 AI 基礎知識

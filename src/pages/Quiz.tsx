@@ -46,7 +46,7 @@ function Quiz() {
                 const limit = parseInt(limitStr, 10);
 
                 // 如果沒有填寫 GAS URL，我們可以提供假資料方便測試 UI
-                if (!gasUrl) {
+                if (!gasUrl || gasUrl.trim() === "") {
                     console.warn("未設定 VITE_GOOGLE_APP_SCRIPT_URL，使用假資料測試");
                     // Ensure limit is a positive number
                     const finalLimit = Math.max(1, isNaN(limit) ? 5 : limit);
